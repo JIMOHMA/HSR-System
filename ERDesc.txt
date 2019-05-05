@@ -1,0 +1,93 @@
+Question 3
+
+1)	Person is an entity with attributes(ID, firstName, lastName, gender, date of birth, 
+	street address, city, province, occupation). It is a superclass to passenger, bus driver
+	and maintenance personnel and it has an ISA relationship with these three entities.
+	Its primary key is ID. It has a one-many relationship with Phone# and a one-many 
+	relationship with passenger, bus driver & maintenance personnel. 
+
+2)	Phone# is a weak entity with attributes(cell, work, home,ID) and has a many-one 
+	relationship with person. Its primary key is ID which is also a foreign key from 
+	Person. 
+	
+3) 	Passenger is an entity with attributes(ID, type) and is in a many-one relationship
+	with Person. Primary key is ID. 
+
+4) 	Bus driver is an entity with attributes(ID, salary, years of service) and has a many-one
+	relationship with Infractions. It also has a many-many relationship with bus. Primary
+	key is ID. 
+
+5) 	Maintenance personnel is an entity with attributes(ID, area of specialization, level,
+	years of service, salary). It's in a many-many relationship with bus which is of total 
+	participation. Primary key is ID. 
+
+6) 	Bus is an entity with attributes(busID, manufacturer, advertisement revenue, # of seats,
+	fuel type, operation years, routeID). It has a many-one relationship with route. Its primary
+	key is busID and its foreign key is routeID. 
+
+7) 	Route is an entity with attributes(routeID, routeName) and has 2 many-many relationships
+	with stops, one of which is a total participation. It also has a many-many relationship
+	with sites of partial participation. Primary key is routeID. 
+
+8) 	Stop is an entity with attributes(stopID, stopName) and has 3 many-many relationship
+	with sites, route & schedule. It's involved in partial participation with these three
+	entites. It's primary key is stopID. 
+
+9) 	Events is an entity with attribute(# of participants, name of event, date, time,
+	address) and has a many-one relationship with sites. Its primary key is name of event
+	& its foreign key is siteName. 
+
+10) 	Sites is an entity with attribute(siteName, category, address, phone #, capacity) and has a 
+	one-many relationship with events. 
+
+11) 	Infractions is a weak entity with attributes(ID, date, type of infraction, demerit 
+	points, financial penalty) and has a many-one relationship with bus driver. Its foreign
+	key is ID from bus driver. 
+
+12) 	Drives is a relationship which involves bus driver & bus. It has attributes(ID, busID)
+	which are primary keys for the relation. 
+
+13) 	Rides ia a relationship which involves passenger & bus. It has attributes(ID, busID, 
+	fare) with primary keys as ID and busID. 
+
+14) 	Fix is a relationship which involves maintenance personnel & bus. It has attributes(ID, busID,
+	date), all of which are the primary keys for the relation.
+
+15)  	isOn is a relationship which involves sites & route. It has attributes(routeID, siteID), 
+	both of which are primary keys for the relation.
+
+16) 	Serves is a relationship which involves stops & route. It has attributes(routeID, stopID)
+	both of which are primary keys for the relation.
+
+17) 	Schedule is a relationship involving route & stops wih attributes(routeID, stopID, arrival
+	time). It has routeID & stopID has its primary keys. 
+
+18) 	Belongs is a relationship involving sites & stops wih attributes(stopID, siteName) 
+	both of which are its primary keys.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
