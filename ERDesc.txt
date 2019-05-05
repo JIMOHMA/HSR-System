@@ -64,30 +64,3 @@ Question 3
 
 18) 	Belongs is a relationship involving sites & stops wih attributes(stopID, siteName) 
 	both of which are its primary keys.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
